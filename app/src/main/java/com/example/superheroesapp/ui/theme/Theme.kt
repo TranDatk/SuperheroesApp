@@ -1,12 +1,12 @@
 package com.example.superheroesapp.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.darkColors
-import androidx.compose.material.lightColors
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 
-private val DarkColorPalette = darkColors(
+private val DarkColorPalette = darkColorScheme(
     background = md_theme_dark_background,
     surface = md_theme_dark_surface,
     onSurface = md_theme_dark_onSurface,
@@ -15,7 +15,7 @@ private val DarkColorPalette = darkColors(
     secondary = md_theme_dark_secondary
 )
 
-private val LightColorPalette = lightColors(
+private val LightColorPalette = lightColorScheme(
     background = md_theme_light_background,
     surface = md_theme_light_surface,
     onSurface = md_theme_light_onSurface,
@@ -33,7 +33,7 @@ fun SuperheroesAppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Co
     }
 
     MaterialTheme(
-        colors = colors,
+        colorScheme = colors,
         typography = Typography,
         shapes = Shapes,
         content = content
